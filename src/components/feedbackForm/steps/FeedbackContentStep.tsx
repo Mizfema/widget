@@ -31,14 +31,19 @@ export function FeedbackContentStep({
 
         <CloseButton />
       </header>
-      <div className="flex gap-2 py-4 w-full">
+     
         <form className="my-4 w-full">
           <textarea 
           className="min-w-[304px] w-full min-h-[112px] text-sm placeholder-zinc-400 text-zinc-100 bg-transparent rounded-md  border-zinc-600 focus:border-brand-500 focus:ring-brand-500 focus:outline-none focus:ring-1  resize-none "
           placeholder="Conte-nos o que está acontecendo..."></textarea>
         </form>
+        
+        <footer>
+          <button className="p-2 bg-brand-500 flex-1 flex justify-center items-center rounded-md border-transparent">
+            Enviar Feedback
+          </button>
+        </footer>
 
-      </div>
     </>
   )
 }
