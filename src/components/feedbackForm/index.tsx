@@ -3,7 +3,7 @@ import IdeiaImage from "../../assets/idea.png"
 import BugImage from "../../assets/bug.png"
 import ThougtImage from "../../assets/thought.png"
 import { useState } from "react";
-import { FeedbackTypeStep } from "./steps/feedbackTypeStep";
+import { FeedbackTypeStep } from "./steps/FeedbackTypeStep";
 import { FeedbackContentStep } from "./steps/FeedbackContentStep";
 import { FeedbackSuccessStep } from "./steps/FeedbackSuccessStep";
 
@@ -44,6 +44,7 @@ export function WidgetForm() {
   const [feedbackSent, setFeedbackSent] = useState(false)
 
   function handleFeedbackTypeRestart() {
+    setFeedbackSent(false)
     setFeedbackType(null)
   }
 
@@ -52,7 +53,7 @@ export function WidgetForm() {
 
 
       {feedbackSent ? (
-        <FeedbackSuccessStep />
+        <FeedbackSuccessStep onFeedbackTypeRestartRequested={handleFeedbackTypeRestart}/>
       ) : (
         <>
           {!feedbackType ? (
