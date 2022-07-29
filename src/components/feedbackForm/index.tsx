@@ -27,7 +27,7 @@ export const feedbackTypes = {
   },
 
   OTHER: {
-    title: 'Problema',
+    title: 'Outro',
     image: {
       source: ThougtImage,
       alt: 'imagem de um balão de pensamento'
